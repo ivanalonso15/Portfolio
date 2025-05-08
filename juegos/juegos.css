@@ -10,7 +10,7 @@ body{
 }
 @font-face {
     font-family: 'ArcadeClassic';
-    src: url('arcadeclassic.ttf') format('truetype');
+    src: url('/arcadeclassic.ttf') format('truetype');
   }
 @keyframes gradient {
   0% {
