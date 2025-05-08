@@ -1,0 +1,714 @@
+/*Estilos directos en el body*/
+body {
+  /* background-color: #e2dfdf !important;  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(to right, #494550, #273a3a,#2f3247); 
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+  
+}
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+}
+
+/*-------------------Efectos para elementos concretos ---------------------*/
+/*--- Efectos para imagenes ---*/
+
+img{
+  border-radius: 20px;
+}
+
+/*--------Efectos para los botones------*/
+
+input[type="button"] {
+  background: none;
+  border-collapse: collapse;
+  border-radius: 2px;
+  border: none;
+  /* color: #beb2e7; */
+   color:  #333333; 
+  padding: 1rem;
+  font-size: 2.3rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  
+  
+}
+input[type="button"]:hover{
+  
+  color:  #7f71ac;
+  transform: scale(1.05);
+  transition: all 0.8s;
+  border: none;
+}
+input[type="button"]:active{ 
+  border: 1px;
+}
+
+/*--------Efectos para cajas de texto---------*/
+
+input[type="text"] {
+  font-size: 38px;
+  border: none;
+  width: 60%;
+  border-bottom: 1px solid #333333;
+  margin-bottom: 40px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+  text-align: center;
+  background: none;
+  color: #333333;
+}
+input[type="text"]:focus {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+input[type="text"]::placeholder {
+  color:#b1b1b1;
+  
+}
+
+
+/*---------Efectos para cajas de contraseñas---------*/
+
+input[type="password"] {
+  text-align: center;
+  font-size: 41px;
+  border: none;
+  width: 60%;
+  border-bottom: 1px solid #333333;
+  margin-bottom: 2.3rem;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 5px 5px;
+  text-align: center;
+  color: #333333;
+  background: none;
+}
+input[type="password"]:focus {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+input[type="password"]::placeholder {
+  color:#b1b1b1;
+  
+}
+
+
+/* -----------------------CSS de la capa principal--------------------*/
+
+.caja1 {
+ height: 100vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ font-family: 'Times New Roman', Times, serif;
+ color: #9e9e9e;
+}
+.caja1 input[type="button"]{
+  font-size: 3.5rem;
+  color:  #d6d6d6;
+}
+.caja1 input[type="button"]:hover{
+  
+  color:  #9580eb;
+}
+
+
+.caja1 h1{
+  font-size: 6.5rem;
+  background-image: linear-gradient(to right, #7f9792, #ca98ce,#9580eb);
+  /* background-image: linear-gradient(to right, #514a4a, #98709c,#573dbc); */
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+}
+@-webkit-keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+@-moz-keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+@keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+.caja1 p {
+  font-size: 1.5rem;
+}
+/* Estilo para pantallas grandes */
+.caja2 {
+  height: 80vh;
+  width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  position: relative;
+  text-align: center;
+}
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .caja2 {
+    height: 50vh;
+    width: 90vw;
+  }
+  .slider h3 {
+    font-size: 3rem;
+  }
+  .slider p {
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 500px;
+  height: 280px;
+  overflow: hidden;
+  color: #333333;
+  /* background-image: linear-gradient(to right, #5f6061, #4f4e4f,#939393); */
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.slider h3{
+  font-size: 3rem;
+}
+.slider p{
+  margin: 1.5rem;
+  font-size: 1.5rem;
+  color:#333333;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  padding: 1.2rem;
+  
+}
+/*----------------------------------------CSS de la capa de loggeo--------------------------*/
+
+.loggeo {
+  width: auto;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap; /* ajuste vertical */
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  
+ 
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+
+.loggeo h1{
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  background-color: #333333;
+  /* background-image: linear-gradient(to right, #0c408f, #625c63,#2a292e); */
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+}
+.loggeo{
+  font-size: 1.3rem;
+}
+.loggeo input[type="button"]{
+  font-size: 2.8rem;
+  margin-left: 3rem;
+}
+
+/*---------------------------------------- CSS de la capa de registro -----------------------*/
+
+.register{
+  width: auto;
+  height: 80vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  /*background-color: rgb(195, 197, 200);*/
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+@media (min-width: 768px) {
+  /* Estilos para pantallas grandes (ancho mínimo de 768px) */
+  .register {
+    height: auto;
+    justify-content: flex-start;
+  }
+  
+  .register h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Estilos para pantallas de tamaño medio (ancho máximo de 767px) */
+  .register {
+    height: 80vh;
+    justify-content: center;
+  }
+  
+  .register h1 {
+    margin-bottom: 0;
+  }
+}
+
+.register h1{
+  font-size: 4rem;
+  margin-bottom: 3rem;
+  background-color: #333333;
+  /* background-image: linear-gradient(to right, #0c408f, #625c63,#2a292e); */
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+}
+
+.register input[type="button"]{
+  font-size: 2.4rem;
+}
+
+/*--------------------------------------- CSS capa Menú ---------------------------*/
+
+.hub_capa{
+  width: auto;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  
+  border-radius: 28px;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.started_user{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+}
+
+.hub input[type="button"]{
+  font-size: 2.9rem;
+  
+}
+#usuario_iniciado{
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  margin-left: 2rem;
+  color: #171818;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  
+  background-size: 200% auto;
+  -webkit-animation: gradient 2s ease infinite;
+  -moz-animation: gradient 2s ease infinite;
+  animation: gradient 2s ease infinite;
+}
+.user_started{
+  margin-bottom: 1rem;
+}
+
+.boton1{
+  margin-right: 3rem;
+}
+.boton3{
+  margin-left: 3rem;
+  color: #7f71ac !important;
+}
+.boton3:hover{
+  color: #333333 !important;
+}
+/*----------------------------------- CSS de la capa cuenta ---------------------------------*/
+
+.cuenta{
+  width: auto;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif; 
+  padding: 1rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  border-radius: 28px;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.cuenta input[type="button"]{
+  margin-left: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .cuenta {
+    height: 70vh;
+    overflow-y: scroll;
+  }
+}
+
+.cuenta span{
+  color: #171818;
+  font-weight: 600;
+ 
+}
+.cuenta h4{
+  font-size: 29px;
+  font-weight: 400;
+  color: #5d5d5d;
+  letter-spacing: 0.1rem;
+  
+}
+#monedas_cuenta{
+  color: #7f71ac;
+  font-weight: bold;
+}
+.table-container {
+  max-height: 40vh; /* ajusta esta altura a la que desees */
+  overflow-y: scroll;
+}
+
+#search-input{
+  font-size: 34px;
+}
+thead {
+  background-color: #415d5d;
+  color: #fff;
+}
+/* Ancho de la barra de scroll */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: none;
+  border-radius: 5px;
+  
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: none;
+}
+.table-scroll {
+  font-size: 24px;
+  height: 21vh;
+  overflow-y: auto;
+  
+  margin: 1rem;
+  color: #171818;
+  font-weight: 600;
+}
+
+.table-scroll table {
+  width: 100%;
+  
+}
+.table-scroll table {
+  width: 100%;
+  
+}
+
+.table-scroll table th, .table-scroll table td {
+  border: 1px solid #415d5d;
+  padding: 8px;
+  text-align: center;
+  
+}
+
+/*------------------------------------- CSS  alquilar ------------------------------*/
+
+.no-disponible {
+  background-color: rgb(111, 111, 111) !important;
+  /* color: #888888 !important; */
+} 
+
+.table-wrpd{
+  width: auto;
+  height: 80vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.7rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  /*background-color: rgb(195, 197, 200);*/
+  
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+
+.table-wrpd input[type="button"]{
+  margin: 1rem;
+}
+
+#tabla2{
+  max-height: 40vh; /* ajusta esta altura a la que desees */
+  overflow-y: scroll;
+}
+
+#tabla-libros {
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/*-------------------------- CSS capa alquilar -----------------------------*/
+.alquilar{
+  width: auto;
+  height: 60vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  /*background-color: rgb(195, 197, 200);*/
+ 
+  
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.alquilar input[type="button"]{
+  margin: 1rem;
+}
+.popup{  
+  color: #7f71ac;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+/*-------------------------- CSS capa alquilar2 -----------------------------*/
+
+.alq2{
+  width: auto;
+  height: 90vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  /*background-color: rgb(195, 197, 200);*/
+  
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.alq2 img{
+  height: 50vh;
+  border: 3px solid #7f71ac; 
+}
+
+#argumento{
+  max-height: 40vh;
+  margin: 2rem; /* ajusta esta altura a la que desees */
+  overflow-y: scroll;
+  font-size: 1.6rem;
+  text-align: center;
+  
+}
+
+/*-------------------------- CSS tabla comprar-----------------------------*/
+.comprar-wrpd{
+  width: auto;
+  height: 90vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  /*background-color: rgb(195, 197, 200);*/
+  
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.contenedor-imagenes{
+  height: 70vh;
+  width: auto;
+  overflow-x: scroll;
+  margin: 3rem;
+}
+.contenedor-imagenes img {
+  margin: 1rem;
+  height: 50vh;
+  width: auto;
+  border: 3px solid #e3e3e3; 
+  
+}
+.contenedor-imagenes img:hover {
+  border: 3px solid #7f71ac; 
+  cursor: pointer;
+  
+  transition: all 0.3s ease-in-out;
+ 
+}
+.contenedor-imagenes::-webkit-scrollbar {
+  width: 10px;
+  height: 0vh;
+  
+}
+
+.contenedor-imagenes::-webkit-scrollbar-track {
+  background: none;
+}
+
+.contenedor-imagenes::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+  
+}
+
+.contenedor-imagenes::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/*-------------------- CSS capa comprar ----------------------*/
+
+.compr2{
+  width: auto;
+  height: 94vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  text-align: center;
+  background-color: #e3e3e3;
+  border: 5px solid #7f71ac;
+  border-radius: 28px;
+  /* background-image: linear-gradient(to right, #c1c6cf, #c0a7ca,#d3c0be); */
+  /*background-color: rgb(195, 197, 200);*/
+  
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite; 
+}
+.compr2 img{
+  height: 50vh;
+}
+.compr2 img:hover{
+  cursor: pointer;
+}
+.compr2 input[type="button"]{
+  margin-left: 1rem;
+  
+}
+#argumento2{
+  max-height: 40vh; /* ajusta esta altura a la que desees */
+  overflow-y: scroll;
+  margin: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.sin-existencia {
+  filter:brightness(15%);
+  
+}
+#foto2{
+  border: 3px solid #7f71ac; 
+}

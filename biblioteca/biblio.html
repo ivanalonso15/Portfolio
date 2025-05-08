@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblio Tech</title>
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" /> 
+    <!------Link CSS ------>
+    <link href="/biblioteca/biblio.css" rel="stylesheet" />
+    <!------JQuery CDN ------>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!------Bootstrap5 bundle------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body >
+    
+    <!---------------- Capa Principal (Portada) ---------------->
+    <div id="principal" class="container">
+      <div class="row">
+        
+        <div class="col-md-6 caja1">
+          <h2 style="color: #aeaeae;">Bienvenido/a</h2>
+          <h1>Biblio Tech</h1>
+          <p class="text-muted fw-light text-capitalize" style="color: #aeaeae !important;">
+            La biblioteca online mas usada por los lectores
+          </p>
+          <!------- Botón 1 ------>
+          <input 
+            type="button" 
+            value="Iniciar Sesión" 
+            onclick="show_user()" 
+          />
+         
+          <span id="no_sus" for="link" style="font-size: 1.5rem">
+            ¿Aún no estás suscrito?
+          </span>
+          <!------- Botón 2 ------>
+          <input
+            type="button"
+            value="Crear Cuenta"
+            id="link"
+            onclick="show_register()"
+          />
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5 caja2">
+          <!-------- Slider JQuery ------->
+          <div class="slider">
+            <div class="slide slide1">
+              <h3>¿Biblio Tech?</h3>
+              <p>
+                Biblio Tech, es una biblioteca online que permite la venta y alquiler de libros online.
+              </p>
+            </div>
+            <div class="slide slide2">
+              <h3>¿Alquilar?</h3>
+              <p>
+                Los libros se alquilan a través de su ID. 
+                Los libros alquilados vuelven a estar disponibles en la biblioteca 7 días después de su alquiler.
+              </p>
+            </div>
+            <div class="slide slide3">
+              <h3>¿Monedas?</h3>
+              <p>
+                Las monedas son un metodo de canje para comprar libros.
+                No se pueden utilizar para alquilar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---------------Capa Inicio Sesión ---------------->
+    <div id="user_hub" class="container">
+      <div class="row loggeo">
+        <div class="col-md-12 d-flex justify-content-center flex-column mx-auto">
+          <div class="mb-3">
+            <h1>Iniciar Sesión</h1>
+          </div>
+          <div class="col-md-12 d-flex flex-column"></div>
+          <div class="mb-3">
+            <input 
+              type="text" 
+              name="id" 
+              id="id"  
+              placeholder="DNI" 
+              maxlength="9" 
+              required 
+            />
+          </div>
+          <div class="mb-3">
+            <input 
+              type="password" 
+              name="contraseña" 
+              id="pwrd" 
+              placeholder="Contraseña" 
+              maxlength="20" 
+              required 
+            />
+          </div>
+          <div class="mb-3">
+            <input 
+              type="button" 
+              onclick="start_session()"  
+              value="Acceder" 
+            />
+            
+            <input 
+              class="d-inline" 
+              type="button" 
+              onclick="show_register()" 
+              value="Crear Cuenta" 
+            />
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!----------------- Capa Registro ------------------>
+    <div id="registro" class="container">
+      <div class="row register">
+        <div class="col-md-12 d-flex justify-content-center flex-column mx-auto">
+          <h1>Registro</h1>
+        </div>
+        <div class="col-md-6 d-flex flex-column">
+          <div class="mb-3"> 
+            <input 
+              type="text" 
+              name="reg_id" 
+              id="reg_id" 
+              placeholder="DNI" 
+              maxlength="9" 
+              required 
+            />
+          </div>
+          <div class="mb-3">
+            <input 
+              type="text" 
+              name="reg_name" 
+              id="reg_name" 
+              placeholder="Nombre" 
+              maxlength="15" 
+              minlength="3" 
+              required 
+            />
+          </div>
+          <div class="mb-3">
+            <input 
+              type="text" 
+              name="reg_ape" 
+              id="reg_ape" 
+              placeholder="Apellido" 
+              maxlength="15" 
+              minlength="3" 
+              required 
+            />
+          </div>
+        </div>
+        <div class="col-md-6 d-flex flex-column">
+          <div class="mb-3">
+            <input 
+              type="password" 
+              name="reg_pwrd" 
+              id="reg_pwrd" 
+              placeholder="Contraseña" 
+              maxlength="20" 
+              required 
+            />
+          </div>
+          <div class="mb-3">
+            <input 
+              type="password" 
+              name="reg_pwrd2" 
+              id="reg_pwrd2" 
+              placeholder="Repita la contraseña" 
+              maxlength="20" 
+              required 
+            />
+          </div>
+          <div class="mb-3 d-flex justify-content-between">
+            <input 
+              type="button" 
+              value="Aceptar" 
+              
+              onclick="register()" 
+            />
+            <input 
+              type="button" 
+              value="Volver a Inicio" 
+              onclick="show_principal()" 
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-------------------- Capa Menú ------------------->
+    <div id="hub" class="container">
+      <div class="hub_capa">
+        <div class="row started_user flex-column">
+          
+          <div class="col-12 user_started">
+            <p>Usuario activo: <span id="usuario_iniciado"></span></p>
+          </div>
+          <div class="row hub d-flex justify-content-center align-items-center">
+            <div class="col-4">
+              <input type="button" value="Alquilar" onclick="show_tabla_alquilar()" class="d-inline-block boton1"/>
+            </div>
+            <div class="col-4">
+              <input type="button" value="Comprar" onclick="show_tabla_comprar()" class="d-inline-block boton2"/>
+            </div>
+            <div class="col-4">
+              <input type="button" value="Mi Usuario" onclick="show_cuenta()" class="d-inline-block boton3"/>
+            </div>
+          </div>
+             
+              
+            
+          </div>      
+        </div>
+      </div>
+    </div>
+     
+    <!------------------ Capa Cuenta ------------------------->
+    <div id="cuenta" class="container">
+      <div class="row cuenta">
+          <div class="col-md-12 d-flex justify-content-center align-items-center mb-3">
+          </div>
+          <!-------- Inserción de datos mediante innerHTML ------->
+          <div class="col-md-6 d-flex flex-column">
+            <div class="mb-5"> 
+              <h4>DNI: <span id="id_cuenta"></span></h4>
+            </div>
+            <div class="mb-5"> 
+              <h4>Nombre: <span id="name_cuenta"></span></h4>
+            </div>
+            <div class="mb-5"> 
+              <h4>Apellido: <span id="ape_cuenta"></span></h4>
+            </div>
+            <div>
+              <h4>Monedas: <span id="monedas_cuenta"></span></h4>
+            </div>
+          </div>
+        
+
+        <!--- Muestro el contenido del array 'libros_alquilados' y 'libros_comprados' propiedades del array 'admin'-->
+        <div class="col-md-6 d-flex flex-column">
+          <div class="mb-3"> 
+                <h4>Libros alquilados por el usuario:</h4>
+                <div class="table-scroll">
+                  <table class="libros_alq_cuenta"></table>
+                </div>
+          </div>
+          <div class="mb-3"> 
+                <h4>Libros comprados por el usuario:</h4>
+                <div class="table-scroll">
+                  <table class="libros_compr_cuenta"></table>
+                </div>
+          </div>
+        </div>
+        
+    
+        <div class="col-md-12 d-flex justify-content-center flex-column mx-auto">
+          <div class="mb-3">
+            <input type="button" value="Atrás" onclick="show_hub()" class="d-inline">
+            <input type="button" value="Cerrar Sesión" onclick="session_out()" class="d-inline">
+            <input type="button" value="Eliminar cuenta" onclick="eliminar_cuenta()" class="d-inline">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!---------------- Capa Tabla Alquilar ------------------->
+    <div id="tabla-alquiler" class="container">
+      <div class="row table-wrpd">
+        <div class="col-md-12 d-flex justify-content-center align-items-center mb-3">
+          <!---- Capa en la que introduzco la barra de búsqueda con JQuery -->
+          <input class="justify-content-center searchbar" id="search-input"  type="text" placeholder="Buscar libros...">
+        </div>
+        <!----- Capa en la que introduzco la tabla mediante JS ----->
+        <div class="table-container">
+          <table class="table table-striped text-align-center" id="tabla-libros">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Autor</th>  
+                <th scope="col">ID</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="row d-flex justify-content-center text-align-center">
+          <div class="col-12">
+            <input 
+              type="button"
+              value="Alquilar"
+              onclick="show_alquilar()"
+              class="d-inline"
+            />
+            <input
+              type="button"
+              value="Atrás"
+              onclick="show_hub()"
+              class="d-inline"
+            />
+          </div>
+        </div> 
+      </div>
+    </div>
+    
+    <!---------------- Capa Alquilar mediante introducción de ID --------------->
+    <div id="alquilar" class="container">
+      <div class="row alquilar flex-column">
+          <div class="col-12">
+            <input
+              type="text"
+              name="id_alquilar"
+              id="id_alquilar"
+              placeholder="ID del libro que desea alquilar"
+              minlength="1"
+              maxlength="2"
+              required
+            />
+          </div>
+          <!----  Alerta en la que aviso de donde encontrar el ID de un libro -->
+          <div class="col-12 popup">
+            <p id="popup">
+                ¡ Encontrará el ID del libro en la tabla anterior !
+            </p>
+          </div>
+          <div class="col-12"> 
+            <input
+              type="button"
+              value="Continuar"
+              onclick="alquilar()"
+            />
+            <input
+              type="button"
+              value="Atrás"
+              onclick="show_tabla_alquilar()"
+            />
+          </div> 
+      </div>
+    </div>
+
+    <!---------------- Capa mostrar datos libro cuyo ID ha sido previamente introducido --------------->
+    <div id="alquilar2" class="container">
+      <div class="row alq2">
+        <div class="col-lg-4 col-md-6"> <!-- Columna izquierda (imagen) -->
+          
+          <img id="foto" class="img-fluid" src="" alt="Imagen del libro">
+        </div>
+        <div class="col-lg-8 col-md-6 justify-content-center text-align-center"> <!-- Columna derecha (resto de elementos) -->
+          <h2 style="font-weight: bold; " id="nombre_libro"></h2>
+          <h3 id="autor_libro"></h3>
+          <p id="argumento"></p>
+          <div class="debajo">
+            <input type="button" value="Alquilar" onclick="alquilar2()">
+            <input type="button" value="Atrás" onclick="retroceder_alq()">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!---------------- Capa comprar libros ------------------>
+      <div id="tabla-comprar" class="container">
+        <!----- Capa en la que se introducen las portadas con scroll vertical-->
+        <div class="comprar-wrpd flex-column align-items-center">
+          <div class="contenedor-imagenes">
+            <div id="scroll_imagenes"></div>
+          </div>
+          <div class="row">
+            <input 
+              type="button"
+              value="Atrás"
+              onclick="show_hub()"
+            /> 
+          </div>
+        </div>
+      </div>
+      
+    <!---------------------Capa mostrar datos libro para comprar-->
+    <div id="comprar2" class="container">
+      <div class="row compr2">
+        <div class="col-lg-5 col-md-6"> <!-- Columna izquierda (imagen) -->
+          <p id="monedas_comprar"></p>
+          <img id="foto2" class="img-fluid" src="" alt="Imagen del libro">
+        </div>
+        <div class="col-lg-7 col-md-6 justify-content-center text-align-center"> <!-- Columna derecha (resto de elementos) -->
+          <h2 style="font-weight: bold; " id="nombre_libro2"></h2>
+          <h3 id="autor_libro2"></h3>
+          <h4 id="existencias"></h4>
+          <p id="argumento2"></p>
+          <div class="debajo">
+            <input type="button" value="Comprar" onclick="comprar2()">
+            <input type="button" value="Atrás" onclick="retroceder_compr()">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-------------------------Fin---------------------------->
+
+    <!-------Link JS------->
+    <script src="/biblioteca/biblio.js"></script>
+
+    <!-------Bootstrap bundle JS ------->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

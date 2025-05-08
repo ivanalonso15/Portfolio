@@ -1,0 +1,738 @@
+body{
+    background-color: rgb(28, 27, 27) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    
+}
+@font-face {
+    font-family: 'ArcadeClassic';
+    src: url('/juegos/arcadeclassic.ttf') format('truetype');
+  }
+@keyframes gradient {
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
+  }
+@-webkit-keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+  
+@-moz-keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+  
+@keyframes gradient {
+  0% { background-position: 0 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}  
+@media only screen and (min-width: 1230px) and (min-height: 596px) {
+  #menu {
+    height: 100vh;
+  }
+  .menu button{
+    font-size: 10px;
+  }
+}
+/*--------------------------- CSS Botones ----------------------------*/
+button {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .25em solid var(--glow-color); 
+    padding: 1em 3em;
+    color: var(--glow-color);
+    
+    letter-spacing: 0.5rem;
+    font-size: 35px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 2rem !important;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    /* text-shadow: 0 0 .5em var(--glow-color); */
+    position: relative;
+    transition: all 0.3s;
+    font-family: 'ArcadeClassic', sans-serif !important;
+   }
+ 
+   
+   button:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    
+   }
+   
+  
+
+/* ---------------------- CSS input text ------------------------*/
+input[type="text"] {
+  font-size: 38px;
+  border: none;
+  width: 80%;
+  border-bottom: 1px solid rgb(231, 206, 255);
+  color:rgba(191, 123, 255, 0.781) ; 
+  outline: none;
+  padding: 0px 0px 5px 5px;
+  text-align: center;
+  align-items: center;
+  background: none;
+}
+input[type="text"]:focus {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+input[type="text"]::placeholder {
+  color:rgb(138, 138, 138);  
+}
+
+/*----------------------- CSS input pwrd -----------------------*/
+input[type="password"] {
+  font-size: 38px;
+  border: none;
+  margin-top: 1rem;
+  width: 80%;
+  border-bottom: 1px solid rgb(231, 206, 255);
+  color:rgba(191, 123, 255, 0.781) ; 
+  outline: none;
+  padding: 0px 0px 5px 5px;
+  text-align: center;
+  align-items: center;
+  background: none;
+}
+input[type="password"]:focus {
+  transform: scale(1.1);
+  transition: all 0.1s ease-in-out;
+}
+input[type="password"]::placeholder {
+  color:rgb(138, 138, 138);  
+}
+/* ------------------------- CAPA PORTADA ---------------------------------*/
+.caja1{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 6rem;
+ font-family: 'ArcadeClassic', sans-serif !important;
+}
+.caja1 h1{  
+  font-size: 7.5rem;
+  background-image: linear-gradient(to right, rgb(136, 33, 233), rgba(235, 214, 255, 0.781),rgb(136, 33, 233));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+  word-spacing: 1rem;
+}
+.caja1 h2{
+  font-size: 2rem;
+  color: rgba(235, 214, 255, 0.781);
+}
+/*----------------------- CAPA ELEGIR INICIO O ALTA  -----------------------------*/
+
+.user_hub button{
+  font-size: 26px !important;
+  --glow-spread-color: rgb(28, 27, 27) ;
+  box-shadow: none;
+  background: none;
+ 
+}
+.user_hub button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+.user_hub h1{ 
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 6rem;
+ word-spacing: 1rem;
+  font-size: 7.5rem;
+  background-image: linear-gradient(to right, rgb(136, 33, 233), rgba(235, 214, 255, 0.781),rgb(136, 33, 233));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    -webkit-animation: gradient 5s ease infinite;
+    -moz-animation: gradient 5s ease infinite;
+    animation: gradient 5s ease infinite;
+    font-family: 'ArcadeClassic', sans-serif !important;
+  }
+
+/*-------------------------- CAPA INICIAR SESIÓN--------------------------------*/
+.iniciar_sesion{
+  width: auto;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+.iniciar_sesion h1{
+  font-size: 3.5rem;
+  color:rgba(191, 123, 255, 0.781) ; 
+}
+.iniciar_sesion button{
+  font-size: 25px !important;
+}
+.textbox-iniciar{
+  margin-top: 3rem;
+}
+.boton_entrar{
+  margin-right: 2rem;
+  margin-top: 4rem;
+  --glow-spread-color: rgb(28, 27, 27);
+  box-shadow: none;
+  background: none;
+  width: 40%;
+  
+}
+.boton_registrarse{
+  margin-left: 2rem;
+  margin-top: 4rem;
+  --glow-spread-color: rgb(28, 27, 27);
+  box-shadow: none;
+  background: none;
+  width: 40%;
+  
+}
+/* ------------------------------ CSS REGISTRAR ----------------------------*/
+.registrar{
+  width: auto;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+.registrar h1{
+  font-size: 3.5rem;
+  color:rgba(191, 123, 255, 0.781) ; 
+}
+.registrar button{
+  font-size: 25px !important;
+}
+.textbox-registrar{
+  margin-top: 0.4rem;
+}
+#nueva_clave{
+  margin-top: 2rem;
+}
+#nueva_clave2{
+  margin-top: 2rem;
+  word-spacing: 1rem;
+}
+.boton_finalizar{
+  margin-right: 2rem;
+  margin-top: 3rem;
+  --glow-spread-color: rgb(28, 27, 27);
+  box-shadow: none;
+  background: none;
+  letter-spacing: 0.4rem !important;
+  width: 40%;
+  
+}
+.boton_volver{
+  margin-left: 2rem;
+  margin-top: 3rem;
+  --glow-spread-color: rgb(28, 27, 27);
+  box-shadow: none;
+  background: none;
+  letter-spacing: 0.4rem ;
+  width: 40%;
+}
+
+/*---------------------------- CSS CAPA MENU --------------------------------*/
+.menu{
+  width: auto;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+.menu button{
+    --glow-color: rgb(39, 191, 222) !important;
+    --glow-spread-color: rgb(28, 27, 27);
+    --enhanced-glow-color: rgb(28, 27, 27);
+    --btn-color: rgb(28, 27, 27);
+    border: .25em solid var(--glow-color); 
+    letter-spacing: 0.5rem;
+    font-size: 30px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+  
+    box-shadow: none;
+    background: none;
+    letter-spacing: 0.4rem !important;
+    width: 100%;
+    border: .20em solid var(--glow-color);
+  word-spacing: 1rem;
+
+}
+.menu button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+.menu h1{
+  font-size: 7.5rem;
+  background-image: linear-gradient(to right, rgb(136, 33, 233), rgba(235, 214, 255, 0.781),rgb(136, 33, 233));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+  
+}
+#usuario_iniciado{
+  font-size: 2rem;
+  color:rgba(191, 123, 255, 0.781) ;
+  margin-bottom: 0 !important;
+}
+
+.menu-cuenta button{
+  --glow-color: rgb(217, 176, 255) !important;
+    --glow-spread-color: rgb(28, 27, 27);
+    --enhanced-glow-color: rgb(28, 27, 27);
+    --btn-color: rgb(28, 27, 27);
+    border: .25em solid var(--glow-color); 
+    letter-spacing: 0.5rem;
+    font-size: 28px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+  
+    box-shadow: none;
+    background: none;
+    letter-spacing: 0.4rem !important;
+    width: 80%;
+    border: .20em solid var(--glow-color);
+    word-spacing: 1rem;
+    margin-bottom: 0 !important;
+}
+
+.slide{
+  width: 100vw;
+  height: 34vh;
+  overflow-x: scroll;
+  white-space: nowrap; 
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory; /* añade esta propiedad */
+}
+
+.slide::-webkit-scrollbar {
+  width: 10px;
+  height: 30px;
+  margin-top: 10px !important;
+}
+
+.slide::-webkit-scrollbar-track {
+  background-color: #454343;
+  border-radius: 2rem ;
+}
+
+.slide::-webkit-scrollbar-thumb {
+  background-color: rgb(39, 191, 222);
+  border-radius: 2rem ;
+}
+
+button {
+  scroll-snap-align: center; /* añade esta propiedad a cada botón */
+}
+
+
+
+/* ---------------------------------- CSS CAPA JUEGO GRATIS -------------------------*/
+.juegos-gratis{
+  width: auto;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+.juegos-gratis h1{
+  font-size: 7.5rem;
+  background-image: linear-gradient(to right, rgb(136, 33, 233), rgba(235, 214, 255, 0.781),rgb(136, 33, 233));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  -webkit-animation: gradient 5s ease infinite;
+  -moz-animation: gradient 5s ease infinite;
+  animation: gradient 5s ease infinite;
+}
+.juegos-gratis h3{
+  font-size: 3.5rem;
+  color: rgb(39, 191, 222);
+  
+}
+#usuario_iniciado2{
+  text-align: left;
+  font-size: 1.5rem;
+  color:rgba(191, 123, 255, 0.781) ;
+}
+.juegos-g-wrpd{
+  margin-top: 2rem;
+  height: 30vh;
+  overflow-y: scroll;
+  
+}
+.juegos-g-wrpd::-webkit-scrollbar {
+  width: 10px; /* ancho de la barra de desplazamiento */
+  margin-left: 10px !important; /* margen derecho para separar la barra del borde */
+}
+.juegos-g-wrpd::-webkit-scrollbar-track {
+  background-color: #454343; /* color del fondo de la barra */
+  border-radius: 2rem ;
+}
+
+.juegos-g-wrpd::-webkit-scrollbar-thumb {
+  background-color: rgb(39, 191, 222) ; /* color del control deslizante */
+  border-radius: 2rem ;
+}
+.juegos-g-wrpd button{
+  --glow-color: rgb(39, 191, 222) !important;
+    --glow-spread-color: rgb(28, 27, 27);
+    --enhanced-glow-color: rgb(28, 27, 27);
+    --btn-color: rgb(28, 27, 27);
+    border: .25em solid var(--glow-color); 
+    letter-spacing: 0.5rem;
+    font-size: 30px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+  
+    box-shadow: none;
+    background: none;
+    letter-spacing: 0.4rem !important;
+    width: 80%;
+    border: .20em solid var(--glow-color);
+  word-spacing: 1rem;
+  
+}
+.juegos-g-wrpd button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+.juegos-g-atras{
+  width: 50%;
+  height: 30%;
+  font-size: 18px !important;
+  --glow-spread-color: rgb(28, 27, 27) ;
+  box-shadow: none;
+  background: none;
+}
+.juegos-g-atras:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+/* ----------------------------- CAPA CUENTA------------------*/
+.cuenta{
+  width: auto;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+.cuenta h1{
+  font-size: 3.5rem;
+  color: rgb(39, 191, 222);
+}
+.cuenta button{
+  font-size: 18px !important;
+  --glow-spread-color: rgb(28, 27, 27) ;
+  box-shadow: none;
+  background: none;
+  margin-left: 2rem;
+    letter-spacing: 0.4rem !important;
+    width: 30%;
+    border: .20em solid var(--glow-color);
+  word-spacing: 1rem;
+}
+.cuenta button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+          
+}
+.cuenta h3{
+  font-size: 2.5rem;
+  color: rgba(191, 123, 255, 0.781);
+}
+#usuario_cuenta{
+  font-size: 3rem;
+  color: rgb(146, 237, 255);
+  margin-left: 1rem;
+}
+#clave_cuenta{
+  font-size: 3rem;
+  color: rgb(146, 237, 255);
+  margin-left: 1rem;
+}
+.cuenta image{
+  height: 20vh !important;
+  width: auto;
+}
+/* ----------------------------- CAPA TRES EN RAYA -------------------*/
+.container2 {
+  max-width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+
+.container2 h1 {
+  font-size: 3.5rem;
+  color: rgb(39, 191, 222);
+  word-spacing: 1rem;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2rem auto;
+  max-width: 300px;
+  color: rgba(191, 123, 255, 0.781);
+  
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(39, 191, 222);
+  font-size: 4rem;
+  text-align: center;
+  line-height: 100px;
+  cursor: pointer;
+  
+}
+
+.mensaje {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 35px !important;
+  font-weight: bold;
+  word-spacing: 1rem;
+  --glow-color: rgb(217, 176, 255);
+    color: var(--glow-color);
+    letter-spacing: 0.5rem;
+    font-family: 'ArcadeClassic', sans-serif !important;
+}
+.container2 button{
+  --glow-color: rgb(217, 176, 255) !important;
+    --glow-spread-color: rgb(28, 27, 27);
+    --enhanced-glow-color: rgb(28, 27, 27);
+    --btn-color: rgb(28, 27, 27);
+    border: .25em solid var(--glow-color); 
+    letter-spacing: 0.5rem;
+    font-size: 19px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    box-shadow: none;
+    background: none;
+    letter-spacing: 0.4rem !important;
+    width: 50%;  
+    margin-top: 1rem;
+}
+.container2 button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+
+/*------------------------- CSS CAPA SNAKE ----------------------------*/
+.container3 {
+  width: auto;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+.snake{
+  height: 80vh;
+}
+canvas {
+  border: 3px solid rgb(39, 191, 222);
+  
+}
+.container3 h1 {
+  font-size: 3.5rem;
+  color: rgb(39, 191, 222);
+  word-spacing: 1rem;
+  margin-bottom: 1rem;
+}
+.container3 h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 28px !important;
+  font-weight: bold;
+  word-spacing: 1rem;
+  --glow-color: rgb(217, 176, 255);
+  color: var(--glow-color);
+  letter-spacing: 0.5rem;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+
+#score {
+  font-weight: bold;
+  color: rgb(39, 191, 222);
+}
+.container3 button{
+  --glow-color: rgb(217, 176, 255) !important;
+    --glow-spread-color: rgb(28, 27, 27);
+    --enhanced-glow-color: rgb(28, 27, 27);
+    --btn-color: rgb(28, 27, 27);
+    border: .25em solid var(--glow-color); 
+    letter-spacing: 0.5rem;
+    font-size: 23px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    box-shadow: none;
+    background: none;
+    letter-spacing: 0.4rem !important;
+    width: 100%;  
+    margin-top: 1rem;
+}
+.container3 button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}
+
+/*------------ */
+#pong{
+  border: 2px solid rgb(39, 191, 222);
+  position: relative;
+  margin :auto;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+}
+#game{
+  width: auto;
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'ArcadeClassic', sans-serif !important;
+}
+#game h1{
+  font-size: 3.5rem;
+  color: rgb(39, 191, 222);
+  word-spacing: 1rem;
+  margin-bottom: 1rem;
+}
+#game button{
+  --glow-color: rgb(217, 176, 255) !important;
+    --glow-spread-color: rgb(28, 27, 27);
+    --enhanced-glow-color: rgb(28, 27, 27);
+    --btn-color: rgb(28, 27, 27);
+    border: .25em solid var(--glow-color); 
+    letter-spacing: 0.5rem;
+    font-size: 18px !important;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    box-shadow: none;
+    background: none;
+    letter-spacing: 0.4rem !important;
+    width: 100%;  
+    margin-top: 3rem;
+}
+#game button:hover{
+  color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+}

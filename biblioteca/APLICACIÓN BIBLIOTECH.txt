@@ -1,0 +1,16 @@
+Biblio Tech, creada con HTML, CSS y JS acompañadao de JQuery y Bootstrap5, es una  biblioteca online que permite el alquiler o compra de libros.
+
+Para usar la aplicación hay que estar dado de alta. Para ello se introduce el DNI, nombre, apellido y contraseñas y siempre y cuando los datos introducidos sean válidos, se creará un nuevo usuario. Cada usuario nuevo recibirá 300 monedas. 
+Si ya existe una cuenta, con iniciar sesión introduciendo DNI y contraseña basta para acceder a la aplicación. Una vez iniciado sesión se mostrará el menú. 
+
+Para alquilar un libro basta con buscar el id del libro que se desea (si está disponible) en la tabla y seguir las instrucciones. Cada vez que se alquila un libro, se establece una fecha para dentro de 7 dias. 
+Cuando pasan esos 7 dias el libro alquilado vuelve a estar disponible en la biblioteca.
+
+Para comprar un libro existe un metodo de canje que son las 'monedas'. A través de la portada de los libros que se muestran se escoge un libro. 
+Si hay existencias de ese libro y se poseen al menos 75 monedas (su precio) se podrá adquirir ese libro. Una vez adquirido se restarán 75 monedas de la cuenta y 1 existencia del libro seleccionado.
+Si no hay monedas o no hay existencias, saltará una alerta y no se podrá adquirir el libro.
+
+En el apartado 'Mi usuario' se visualizarán los datos de la cuenta, desde el DNI, nombre, apellido y monedas, hasta los libros alquilados y comprados. Además se permitirá eliminar la cuenta o cerrar sesión.
+
+
+

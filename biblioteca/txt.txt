@@ -1,0 +1,37 @@
+   <div id="principal" class="container">
+     
+      <!---Header--->
+      <header class="row">
+        <div class="col-md-7">
+          <!----Título---->
+          <h1 class="display-2">
+            <span class="d-block"> Bienvenido/a </span>
+            a Biblio Tech
+          </h1>
+          <!----Subtitulo---->
+          <p class="text-muted fw-light text-capitalize">
+            La biblioteca online mas usada por los lectores
+          </p>
+          <!----Botones----->
+          <div class="d-block">
+            <!-----Botón Inicio de Sesión----->
+            <button value="Iniciar Sesión" onclick="show_user()" class="btn btn-dark w-50">
+              Iniciar Sesión
+            </button><br><br>
+            <!------Texto precedido del botón de suscribirse-->
+            <span id="no_sus" for="link" style="font-size: 20px">
+              ¿Aún no estás suscrito?
+            </span>
+            <!------Botón para Crear Cuenta------>
+            <button id="crear_cuenta" onclick="show_register()" class="btn btn-dark w-50">
+                Crear Cuenta
+            </button>
+          </div>
+        </div>
+        <div class="col-8 col-md-4">
+        <div class="photo-frame position-relative shadow">
+          <img src="/Biblioteca/pexels-mark-cruzat-3494806.jpg" alt="Biblioteca" class="w-100"/>
+        </div>
+        </div>
+      </header>
+    </div>

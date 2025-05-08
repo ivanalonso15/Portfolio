@@ -1,0 +1,185 @@
+const libros_comprar = [
+  {
+    Nombre: "HIJOS DE LA FABULA",
+    Autor: "FERNANDO ARAMBURU",
+    existencias: 34,
+    id_libro: 1,
+    portada: "HijosFabula.jpg"
+  },
+  {
+    Nombre: "CASTILLOS DE FUEGO",
+    Autor: "IGNACIO MARTINEZ DE PISON",
+    existencias: 5,
+    id_libro: 2,
+    portada: "CastillosdeFuego.jpg"
+  },
+  {
+    Nombre: "LA VOZ DE LOS VALIENTES",
+    Autor: "RAFAEL TARRADAS BUILTO",
+    existencias: 23,
+    id_libro: 3,
+    portada: "LaVozDeLosValientes.jpg"
+  },
+  {
+    Nombre: "TODAS LAS PIEZAS ROTAS",
+    Autor: "JOHN BOYNE",
+    existencias: 2,
+    id_libro: 4,
+    portada: "PiezasRotas.jpg"
+  },
+  {
+    Nombre: "EL CUCO DE CRISTAL",
+    Autor: "JAVIER CASTILLO",
+    existencias: 43,
+    id_libro: 5,
+    portada: "CucoCristal.jpg"
+  },
+
+  {
+    Nombre: "EL RETRATO DE CASADA",
+    Autor: "MAGGIE O´FARRELL",
+    existencias: 67,
+    id_libro: 7,
+    portada: "RetratoCasada.jpg"
+  },
+  {
+    Nombre: "DE VUELTA A CASA",
+    Autor: "KATE MORTON",
+    existencias: 73,
+    id_libro: 8,
+    portada: "VueltaCasa.jpg"
+  },
+  {
+    Nombre: "EL TABLERO DE LA REINA",
+    Autor: "LUIS ZUECO",
+    existencias: 12,
+    id_libro: 9,
+    portada: "TableroReina.jpg"
+  },
+  {
+    Nombre: "SOLO HUMO",
+    Autor: "JUAN JOSÉ MILLÁS",
+    existencias: 193,
+    id_libro: 10,
+    portada: "SoloHumo.jpg"
+  },
+  {
+    Nombre: "HÁBITOS ATÓMICOS",
+    Autor: "JAMES CLEAR",
+    existencias: 1,
+    id_libro: 11,
+    portada: "HabitosAtomicos.jpg"
+  },
+  {
+    Nombre: "ESPERANDO AL DILUVIO",
+    Autor: "DOLORES REDONDO",
+    existencias: 7,
+    id_libro: 12,
+    portada: "Diluvio.jpg"
+  },
+  {
+    Nombre: "EL ANGEL DE LA CIUDAD",
+    Autor: "EVA GARCIA SAENZ DE URTURI",
+    existencias: 11,
+    id_libro: 18,
+    portada: "AngelCiudad.jpg"
+  },
+  {
+    Nombre: "REVOLUCIÓN, UNA NOVELA",
+    Autor: "ARTURO PEREZ-REVERTE",
+    existencias: 5,
+    id_libro: 13,
+    portada: "Revolucion.jpg"
+  },
+  {
+    Nombre: "EL LADRÓN DE ROSTROS",
+    Autor: "IBON MARTÍN",
+    existencias: 8,
+    id_libro: 14,
+    portada: "LadronRostros.jpg"
+  },
+  {
+    Nombre: "LEJOS DE LUISIANA",
+    Autor: "LUZ GABÁS",
+    existencias: 60,
+    id_libro: 15,
+    portada: "Luisiana.jpg"
+  },
+  {
+    Nombre: "LA DESCONOCIDA",
+    Autor: "ROSA MONTERO",
+    existencias: 45,
+    id_libro: 16,
+    portada: "Desconocida.jpg"
+},
+  {
+    Nombre: "SIEMPRE",
+    Autor: "DEFREDS",
+    existencias: 23,
+    id_libro: 17,
+    portada: "Siempre.jpg"
+  },
+  {
+    Nombre: "ENCUENTRA TU PERSONA VITAMINA",
+    Autor: "MARIAN ROJAS ESTAPÉ",
+    existencias: 33,
+    id_libro: 41,
+    portada: "PersonaVitamina.jpg"
+  },
+  {
+    Nombre: "EL HOMBRE EN BUSCA DE SENTIDO",
+    Autor: "VIKTOR EMIL FRANKL",
+    existencias: 29,
+    id_libro: 19,
+    portada: "HombreBuscaSentido.jpg"
+  },
+  {
+    Nombre: "EL ANCHO MUNDO",
+    Autor: "PIERRE LEMAITRE",
+    existencias: 2,
+    id_libro: 20,
+    portada: "AnchoMundo.jpg"
+  },
+  {
+    Nombre: "LOS DUEÑOS DEL PLANETA",
+    Autor: "CRISTINA MARTÍN JIMENEZ",
+    existencias: 20,
+    id_libro: 21,
+    portada: "DueñosPlaneta.jpg"
+  },
+  {
+    Nombre: "TODAS ESAS COSAS QUE TE DIRÉ MAÑANA",
+    Autor: "ELÍSABET BENAVENT",
+    existencias: 89,
+    id_libro: 22,
+    portada: "CosaDireMañana.jpg"
+  },
+  {
+    Nombre: "TODO ARDE",
+    Autor: "JUAN GÓMEZ-JURADO",
+    existencias: 56,
+    id_libro: 23,
+    portada: "TodoArde.jpg"
+  },
+  {
+    Nombre: "EL CANTAR DE LIÉBANA",
+    Autor: "PERIDIS",
+    existencias: 9,
+    id_libro: 24,
+    portada: "CantarLiebana.jpg"
+  },
+  {
+    Nombre: "EL JUEGO DEL ALMA",
+    Autor: "JAVIER CASTILLO",
+    existencias: 0,
+    id_libro: 25,
+    portada: "JuegoAlma.jpg"
+  },
+  {
+    Nombre: "LOS ENCLAVES DORADOS",
+    Autor: "NAOMI NOVIK",
+    existencias: 23,
+    id_libro: 26,
+    portada: "EnclavesDorados.jpg"
+  },
+];
